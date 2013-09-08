@@ -60,10 +60,13 @@ namespace WindowsPhoneApp
 
                     // Now upload on the SAS
                     var content = new StreamContent(memoryStream);
-                    using (var uploadResponse = await client.PutAsync(new Uri(photo.SAS), content))
+
+                    // Create blob url with the SAS, and use it to upload
+                    var blobUrlWithSAS = photo.BlobUrl + "?" + photo.SAS;
+                    using (var uploadResponse = await client.PutAsync(new Uri(blobUrlWithSAS), content))
                     {
                         uploadResponse.EnsureSuccessStatusCode();
-                        var remoteUrl = photo.SAS.Split('?').First();
+                        var remoteUrl = photo.BlobUrl;
                         remoteImage.Source = new BitmapImage(new Uri(remoteUrl)); // Load the remote image
                     }
                 }

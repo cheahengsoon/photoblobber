@@ -12,6 +12,7 @@ namespace Model
 
         public string ContainerName { get; set; }
         public string ResourceName { get; set; }
+        public string BlobUrl { get; set; }
         public string SAS { get; set; }
     }
 }

@@ -27,8 +27,10 @@ function insert(item, user, request) {
                  // generate the SAS for your BLOB
                  var sasQueryString = getSAS(accountName, accountKey, canonicalizedResource, azure.Constants.BlobConstants.ResourceTypes.BLOB, sharedAccessPolicy);
 
-                 // full path for resource with sas
-                 item.SAS = 'https://' + host + canonicalizedResource + '?' + sasQueryString;
+                 // Store blob URL and SAS
+                 item.BlobUrl = 'https://' + host + canonicalizedResource;
+                 item.SAS = sasQueryString;
+
              } else { console.error(error); }
 
              request.execute();

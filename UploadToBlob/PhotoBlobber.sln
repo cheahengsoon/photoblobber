@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C34E7DBC-CE34-4D82-ACF6-DB3A973BC61E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile Service Scripts", "Mobile Service Scripts", "{A3FCD638-FCB4-43E2-867C-B75569F46688}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TableScripts", "TableScripts", "{746EF7BC-E314-49AE-B6B4-5F5C98E54D65}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Photo Table", "Photo Table", "{387D50CF-F558-4D1E-971A-4955C5F4AD02}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Photo", "Photo", "{6153BCB6-557D-4BAE-A7F3-BBD55B3292B3}"
 	ProjectSection(SolutionItems) = preProject
-		photo insert.js = photo insert.js
+		TableScripts\Photo\insert.js = TableScripts\Photo\insert.js
 	EndProjectSection
 EndProject
 Global
@@ -55,6 +55,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{387D50CF-F558-4D1E-971A-4955C5F4AD02} = {A3FCD638-FCB4-43E2-867C-B75569F46688}
+		{746EF7BC-E314-49AE-B6B4-5F5C98E54D65} = {C34E7DBC-CE34-4D82-ACF6-DB3A973BC61E}
+		{6153BCB6-557D-4BAE-A7F3-BBD55B3292B3} = {746EF7BC-E314-49AE-B6B4-5F5C98E54D65}
 	EndGlobalSection
 EndGlobal
