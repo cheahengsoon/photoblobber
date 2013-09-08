@@ -57,6 +57,7 @@ namespace WindowsPhoneApp
                     // Get a stream of the captured photo
                     var writableBitmap = new WriteableBitmap(capturedPhoto);
                     writableBitmap.SaveJpeg(memoryStream, capturedPhoto.PixelWidth, capturedPhoto.PixelHeight, 0, 100);
+                    memoryStream.Position = 0; // Rewind the stream
 
                     // Now upload on the SAS
                     var content = new StreamContent(memoryStream);
